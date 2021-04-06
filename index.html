@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= "https://kit.fontawesome.com/2c46cba632.js"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Project 1</title>
+</head>
+<body>
+    <section id="page1" class="all">
+        <h1>Welcome to Our Presentation</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officiis facilis vitae vel dolore consequuntur distinctio quas
+             cupiditate odit. Vitae et dolore est sed reprehenderit modi 
+             incidunt dicta. Repellat, repudiandae veritatis consequatur consectetur
+             eaque suscipit officiis fugit cupiditate maiores harum quae?</p>
+             <a href="#page2" class="btn1">Next Page <i class="fas fa-arrow-circle-down"></i></a>
+    </section>
+    <section id="page2" class="all">
+        <h1>1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officiis facilis vitae vel dolore consequuntur distinctio quas
+             cupiditate odit. Vitae et dolore est sed reprehenderit modi 
+             incidunt dicta. Repellat, repudiandae veritatis consequatur consectetur
+             eaque suscipit officiis fugit cupiditate maiores harum quae?</p>
+             <div><a href="#page1" class="btn1 btn2">Previous Page <i class="fas fa-arrow-circle-up"></i></a>
+             <a href="#page3" class="btn1">Next Page <i class="fas fa-arrow-circle-down"></i></a></div>
+    </section>
+    <section id="page3" class="all">
+        <h1>2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officiis facilis vitae vel dolore consequuntur distinctio quas
+             cupiditate odit. Vitae et dolore est sed reprehenderit modi 
+             incidunt dicta. Repellat, repudiandae veritatis consequatur consectetur
+             eaque suscipit officiis fugit cupiditate maiores harum quae?</p>
+             <div><a href="#page2" class="btn1 btn2">Previous Page <i class="fasfa-arrow-circle-up"></i></a>
+             <a href="#page4" class="btn1">Next Page <i class="fas fa-arrow-circle-down"></i></a></div>
+    </section>
+    <section id="page4" class="all">
+        <h1>3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officiis facilis vitae vel dolore consequuntur distinctio quas
+             cupiditate odit. Vitae et dolore est sed reprehenderit modi 
+             incidunt dicta. Repellat, repudiandae veritatis consequatur consectetur
+             eaque suscipit officiis fugit cupiditate maiores harum quae?</p>
+             <a href="#page3" class="btn1 btn2">Previous Page <i class="fas fa-arrow-circle-up"></i></a>
+             
+    </section>
+
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+      $('.btn1').on('click' ,function(event){
+          if(this.hash!==''){
+              event.preventDefault();
+              const hash = this.hash;
+              $('html,body').animate(
+                  {
+                      scrollTop: $(hash).offset().top
+                  },
+                  800
+              );
+        }
+    });
+      
+  </script>
+</body>
+</html>
